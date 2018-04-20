@@ -41,14 +41,14 @@ class Router
         $queryParams = $url;
 
         //Создаём экземпляр класса $controller
-        $dispatch = new $controller($controller_name, $action); //Вот тут выходит ошибка
+        $dispatch = new Home($controller_name, $action); //Вот тут выходит ошибка
 
         /**
          * Проверяем есть ли метод $action в классе $controller,
          * если есть то используем callback-функцию с массивом параметров,
          * если такого метода нет, то выдаем ошибку
          */
-        if(method_exists($controller, $action))
+        if(method_exists($dispatch, $action))
         {
             call_user_func_array([$dispatch, $action], $queryParams);
         }
