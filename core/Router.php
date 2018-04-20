@@ -41,7 +41,7 @@ class Router
         $queryParams = $url;
 
         //Создаём экземпляр класса $controller
-        $dispatch = new $controller($controller_name, $action);
+        $dispatch = new $controller($controller_name, $action); //Вот тут выходит ошибка
 
         /**
          * Проверяем есть ли метод $action в классе $controller,
