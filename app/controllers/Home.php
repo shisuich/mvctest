@@ -1,12 +1,13 @@
 <?php
 
-namespace Controllers;
+namespace Controllres;
 
 
 class Home
 {
     public function indexAction()
     {
-        echo "Home Controller";
+        echo "HOME работет";
     }
 }
+
